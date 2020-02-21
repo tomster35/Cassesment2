@@ -1,7 +1,7 @@
 const express  = require('express');
 const router   = express.Router();
 const mongoose = require('mongoose'); // using to generate ObjectIDs
-const Shoe  = require('../models/Shoe ').Shoe ;
+const Shoe  = require('../models/Shoe').Shoe ;
 
 /**
  * Functionality for this route:

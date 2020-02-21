@@ -3,7 +3,7 @@ import urlToCurrentDomain from '../lib/urlToCurrentDomain';
 import {Link}             from '@reach/router';
 import * as Config        from '../config.json'
 
-class Cakes extends React.Component {
+class Shoes extends React.Component {
 
   // #######################################################
   // # Local state
@@ -17,24 +17,24 @@ class Cakes extends React.Component {
 
   render() {
 
-    if (!this.state.cakes && this.state.cakesLoaded === true) {
+    if (!this.state.shoes && this.state.shoesLoaded === true) {
       return (
-        <p>Error loading cakes. Try again later.</p>
+        <p>Error loading shoes. Try again later.</p>
       );
-    } else if (!this.state.cakes) {
+    } else if (!this.state.shoes) {
       return (
-        <p>Loading cakes...</p>
+        <p>Loading shoes...</p>
       );
-    } else if (this.state.cakes.length === 0) {
+    } else if (this.state.shoes.length === 0) {
       return (
-        <p>Sorry, no cakes are available</p>
+        <p>Sorry, no shoes are available</p>
       );
     } else {
       return (
         <div>
-          <h1>All Cakes in the database</h1>
+          <h1>All Shoes in the database</h1>
           <ul>
-            {this.state.cakes.map(cake => (
+            {this.state.shoes.map(cake => (
               <li key={`cake_${cake._id}`}><Link to={`/cake/${cake._id}`}>{cake.title}</Link></li>
             ))}
           </ul>
@@ -45,18 +45,18 @@ class Cakes extends React.Component {
   }
 
   componentDidMount() {
-    fetch(urlToCurrentDomain(Config.cakesAPI))
+    fetch(urlToCurrentDomain(Config.shoesAPI))
       .then (res  => res.json())
       .then (json => {
-        this.setState({cakes       : json});
-        this.setState({cakesLoaded : true});
+        this.setState({shoes       : json});
+        this.setState({shoesLoaded : true});
       })
       .catch(err => {
-        this.setState({cakesLoaded: true});
+        this.setState({shoesLoaded: true});
       });
   }
 
 }
 
-export default Cakes;
+export default Shoes;
 
