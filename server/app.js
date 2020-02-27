@@ -7,7 +7,7 @@ const app            = express();
 const mongoose       = require('mongoose');
 const config         = require('./config.json');
 
-// Basic application-level middleware set-up
+// Basic application-level middleware set-up-+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));

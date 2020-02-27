@@ -34,11 +34,11 @@ class Shoes extends React.Component {
         <div>
           <h1>All Shoes in the database</h1>
           <ul>
-            {this.state.shoes.map(cake => (
-              <li key={`cake_${cake._id}`}><Link to={`/cake/${cake._id}`}>{cake.title}</Link></li>
+            {this.state.shoes.map(shoe => (
+              <li key={`shoe_${shoe._id}`}><Link to={`/shoe/${shoe._id}`}>{shoe.title}</Link></li>
             ))}
           </ul>
-          <p><Link to='/add-cake'>Add a new Cake</Link></p>
+          <p><Link to='/add-shoe'>Add a new Shoe</Link></p>
         </div>
       )
     }

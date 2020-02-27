@@ -32,7 +32,12 @@ class Shoe extends React.Component {
     } else {
       return (
         <div>
-          <h1>{this.state.shoe.title}</h1>
+          <h1>Shoe Design</h1><p>{this.state.shoe.title}</p>
+           
+
+
+
+
           <Link to='/'>Back to All shoes</Link>
         </div>
       )

@@ -39,7 +39,7 @@ class AddShoe extends React.Component {
           <form onSubmit={this.handleSubmit.bind(this)}>
 
             <div>
-              <label>shoe Title:
+              <label>Shoe Title:
                 <input type='' value={this.state.title} onChange={this.handleTitleUpdate.bind(this)} />
               </label>
             </div>
