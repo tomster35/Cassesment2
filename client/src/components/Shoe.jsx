@@ -33,6 +33,7 @@ class Shoe extends React.Component {
       return (
         <div>
           <h1>Shoe Design</h1><p>{this.state.shoe.title}</p>
+         <p>Size{this.state.shoe.size}</p>
            
 
 

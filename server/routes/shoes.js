@@ -40,9 +40,10 @@ router.get('/:id([0-9a-fA-F]{24})', (req, res) => {
 router.post('/', (req, res) => {
   return new Shoe({
     title     : req.body.title,
+    size     : req.body.size,
   })
   .save()
-  .then (shoe => Shoe.populate(cake, {path: '_id'}))
+  .then (shoe => Shoe.populate(shoe, {path: '_id'}))
   .then (shoe => res.json(shoe))
   .catch(err => res
     .status(400)
@@ -68,6 +69,7 @@ router.put('/:id([0-9a-fA-F]{24})', (req, res) => {
       {_id: req.params.id},
       {$set: {
         title  : req.body.title,
+        size : req.body.size,
       }},
       {new: true}
     )

@@ -13,6 +13,10 @@ class AddShoe extends React.Component {
     title     : ''
   }
 
+  state = {
+    size     : ''
+  }
+
   // #######################################################
   // # Render
   // #######################################################
@@ -44,6 +48,13 @@ class AddShoe extends React.Component {
               </label>
             </div>
 
+            <div>
+              <label>Shoe Size:
+                <input type='' value={this.state.size} onChange={this.handleSizeUpdate.bind(this)} />
+              </label>
+            </div>
+
+
             {/* <div>
               <label>shoe Content:
                 <textarea value={this.state.content} onChange={this.handleContentUpdate.bind(this)}></textarea>
@@ -65,6 +76,11 @@ class AddShoe extends React.Component {
     this.setState({title: e.target.value || null});
   }
 
+  handleSizeUpdate(e) {
+    this.setState({size: e.target.value || null});
+  }
+
+
   handleContentUpdate(e) {
     this.setState({content: e.target.value || null});
   }
@@ -83,7 +99,8 @@ class AddShoe extends React.Component {
       body: JSON.stringify({
         authoredBy: this.state.authoredBy,
         title     : this.state.title,
-        content   : this.state.content
+        content   : this.state.content,
+        size    : this.state.size
       })}
     )
       .then (res  => {
