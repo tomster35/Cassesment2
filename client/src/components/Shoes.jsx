@@ -23,7 +23,7 @@ class Shoes extends React.Component {
       );
     } else if (!this.state.shoes) {
       return (
-        <p>Loading shoes...</p>
+        <p>Loading shoes....</p>
       );
     } else if (this.state.shoes.length === 0) {
       return (
