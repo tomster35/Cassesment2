@@ -32,7 +32,7 @@ class Shoes extends React.Component {
     } else {
       return (
         <center> <div>
-         <center> <u><h1>**** All Shoes in Factory ****</h1></u> </center>
+         <center> <u><h1>**** All Shoes in Factory ***  *</h1></u> </center>
       <em><h2> With  11 special and <u> Creative Designs </u> to view.</h2></em> 
          
             {this.state.shoes.map(shoe => (
