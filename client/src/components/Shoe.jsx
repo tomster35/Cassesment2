@@ -27,7 +27,7 @@ class Shoe extends React.Component {
       );
     } else if (this.state.shoe.length === 0) {
       return (
-        <p>Sorry, no shoe are available</p>
+        <p>Sorry, no shoes are available</p>
       );
     } else {
       return (

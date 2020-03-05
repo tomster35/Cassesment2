@@ -31,15 +31,16 @@ class Shoes extends React.Component {
       );
     } else {
       return (
-        <div>
-          <h1>All Shoes in the database</h1>
-          <ul>
+        <center> <div>
+         <center> <u><h1>**** All Shoes in Factory ****</h1></u> </center>
+      <em><h2> With  11 special and <u> Creative Designs </u> to view.</h2></em> 
+         
             {this.state.shoes.map(shoe => (
               <li key={`shoe_${shoe._id}`}><Link to={`/shoe/${shoe._id}`}>{shoe.title}</Link></li>
             ))}
-          </ul>
-          <p><Link to='/add-shoe'>Add a new Shoe</Link></p>
-        </div>
+         
+          <p><Link to='/add-shoe'>Click to add a new Shoe</Link></p>
+        </div> </center>
       )
     }
   }
