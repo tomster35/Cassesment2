@@ -1,14 +1,14 @@
 import React    from 'react';
-import ViewCart from './ViewCart';
-import {Nav, Navbar, NavDropdown, Form} from 'react-bootstrap';
-import StripeCheckout from 'react-stripe-checkout';
+import {Nav, Navbar, NavDropdown} from 'react-bootstrap';
+
+
 
 class Header extends React.Component {
 
   render() {
     return (
       <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">Apple iPhone </Navbar.Brand>
+      <Navbar.Brand href="#home">Shoe Factory </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
@@ -23,18 +23,11 @@ class Header extends React.Component {
           </NavDropdown>
         </Nav>
   
-        <Form inline>
-        <centre>  <ViewCart cart={this.props.cart} /></centre> 
-        
-        </Form>
-        <StripeCheckout
-        stripeKey="pk_test_FIN9AXH48VszOEtWj5fP0iYv00qrXnvrLe"
-        token={this.onToken}
-      />
+       
      
       </Navbar.Collapse>
       <div>
-    </div>
+    </div> 
     </Navbar>
     
     
