@@ -34,6 +34,7 @@ class Shoe extends React.Component {
         <div>
           <h1>Shoe Design</h1><p>{this.state.shoe.title}</p>
          <p>Size{this.state.shoe.size}</p>
+      <h1><img src={this.state.shoe.image}></img></h1>
            
 
 
